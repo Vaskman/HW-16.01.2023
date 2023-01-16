@@ -23,35 +23,41 @@ public class Main {
             }
             //task5
             System.out.println("ЗАДАЧА №5");
-            for (int i = 1904; i <= 2096; i = i + 4) {
-                System.out.println(i + " год является високосным».");
+            for (int year = 1904; year <= 2096; year ++) {
+                if (year % 4==0 && year % 100 !=0 || year % 400 ==0)
+                System.out.println(year + " год является високосным».");
             }
             //task6
             System.out.println("ЗАДАЧА №6");
             for (int i = 7; i <= 98; i = i + 7) {
-                System.out.println("Интерация последовательности чисел сложения " + i);
+                System.out.print(i+" ");
             }
+        System.out.println();
             //task7
             System.out.println("ЗАДАЧА №7");
-            for (int i = 1; i <= 512; i = i * 2) {
-                System.out.println("Интерация последовательности чисел умножение " + i);
+            int number = 1;
+            for (int i = 0; i<9; i++) {
+                number=number*2;
+                System.out.print(number+" ");
             }
+        System.out.println();
+
+
             //task8
             System.out.println("ЗАДАЧА №8");
             int money = 29000;
             int total = 0;
-            for (int i = 0; i < 12; i++) {
-                total = money + total;
+            for (int i = 1; i <=12; i++) {
+                total += money;
                 System.out.println("Месяц " + i + " сумма накоплений равна " + total + " рублей»");
             }
             //task9
             System.out.println("ЗАДАЧА №9");
-            int money1 = 29000;
-            int total1 = 0;
-            for (int i = 0; i < 12; i++) {
-                total1 = total1+ total1 /100;
-                total1 = money1 + total1;
-                System.out.println("Месяц " + i + " сумма накоплений равна " + total1+ " рублей»");
+            double totalPerson=0;
+        double person = 0.01;
+        for (int i = 1; i <=12; i++) {
+            totalPerson = (totalPerson+money) *(1+person);
+                System.out.println("Месяц " + i + " сумма накоплений равна " + totalPerson+ " рублей»");
             }
             //task10
             System.out.println("ЗАДАЧА №10");
